@@ -30,3 +30,11 @@ summary.lm(simp)
 
 ## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
+```{r}
+bAGE <- lm(LENGTH~AGE,data=bears)
+plot(LENGTH~AGE,data=bears)
+abline(bAGE)
+summary.lm(bAGE)
+```
+
+We want to compare the model with age to the other model with neck. Ordering by adjusted R square in the model with neck we got 0.7476 and for rhe age model it was 0.5073. With this we found out that neck is better thank age.  
